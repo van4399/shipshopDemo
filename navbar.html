@@ -1,0 +1,68 @@
+<nav id="navBar" class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+    <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+        <div class="icon p-2 me-2">
+            <img class="img-fluid" src="img/fish.png" alt="Icon" style="width: 30px; height: 30px;">
+        </div>
+        <h1 class="m-0 text-primary">Fish Shop</h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+            <a href="index.html" class="nav-item nav-link active menuItem">Trang chủ</a>
+            
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh sách</a>
+                <div class="dropdown-menu rounded-0 m-0">
+                    <a href="Products.html" class="dropdown-item menuItem">Tất cả các loại cá</a>
+                    <a href="property-type.html" class="dropdown-item menuItem">Loại cá mới</a>
+                    <!-- <a href="property-agent.html" class="dropdown-item">Property Agent</a> -->
+                </div>
+            </div>
+            <!-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Giỏ hàng</a>
+                <div class="dropdown-menu rounded-0 m-0">
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="404.html" class="dropdown-item">404 Error</a>
+                </div>
+            </div> -->
+            <a href="contact.html" class="nav-item nav-link">Thông tin về chúng tôi</a>
+            <div class="dropdown nav-item nav-link">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="icofont-user-alt-5"></i>
+                    Tài khoảng
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><a href="shoppingCart.html" class="dropdown-item">Giỏ hàng</a></li>
+                    <li><a href="purchaseHistory.html" class="dropdown-item">Lịch sử đơn hàng</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng nhập</a>
+                    </li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#register">Đăng kí</a></li>
+                    <li><a href="#" class="dropdown-item">Đăng xuất</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<script>
+    var menu = document.getElementById("navBar");
+    var items = menu.getElementsByClassName("menuItem");
+    for (var i = 0; i < items.length; i++) {
+     
+        if(items[i] == window.location.href){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            items[i].className += " active";
+            break;
+        }else{
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+        }
+    }
+</script>

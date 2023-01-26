@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="icofont/icofont/icofont.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #accordion {
+            display: none;
+        }
+
+        @media only screen and (max-width: 720px) {
+
+            .imgDesc,
+            #titleDetail {
+                display: none;
+            }
+
+            #accordion {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body ng-app="myapp" ng-controller="myctrl">
+    <div class="container-xxl bg-white ">
+        <!-- Navbar Start -->
+        <div ng-include="'navbar.html'" class="container-fluid nav-bar bg-transparent"></div>
+        <!-- End Navbar -->
+
+        <!-- start info product -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Chi tiết sản phẩm</h1>
+                    <p>Cá gì đó.</p>
+                </div>
+            </div>
+        </div>
+        <!-- end info product -->
+
+        <!-- Call to Action Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="bg-light rounded p-3">
+                    <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                                <!-- image  carousel -->
+                                <div>
+                                    <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal"
+                                        data-src="https://www.youtube.com/embed/upCptHeThio" data-bs-target="#myModal">
+                                        <img src="img/clipFish.gif" class="d-block w-100" alt="...">
+                                    </button>
+                                </div>
+                                <!-- image carousel -->
+                            </div>
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                                <h1 class="mb-3">Cá guppy xyz vip pro</h1>
+                                <div class="row mb-3">
+                                    <span class="col-md-3 m-2 border border-3 rounded-pill">5Sao</span>
+                                    <span class="col-md-3 m-2 border border-3 rounded-pill ">100 Đánh giá</span>
+                                    <span class="col-md-3 m-2 border border-3 rounded-pill">15 đã bán</span>
+                                </div>
+
+                                <div class="price mb-3">Giá: 300,000 VNĐ</div>
+                                <div class="discount d-flex flex-row bd-highlight mb-4">
+                                    <div class="text-nowrap">Mã giảm giá: </div>
+                                    <input class="w-75 ms-1" type="text">
+                                </div>
+                                <div class="row  mb-3">
+                                    <span class="col-md-2">Số lượng: </span>
+                                    <div class="d-flex col-md-10">
+                                        <button class="btn btn-primary px-3 me-2" style="width: 10%;"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+
+                                        <div class="form-outline">
+                                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                                                class="form-control" />
+                                        </div>
+
+                                        <button class="btn btn-primary px-3 ms-2" style="width: 10%;"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <button class="col-md-5 m-1 rounded-pill" type="button" class="btn btn-success">Thêm
+                                        vào giỏ</button>
+                                    <button class="col-md-6 m-1 rounded-pill" type="button" class="btn btn-danger">Đặt
+                                        ngay</button>
+                                </div>
+                            </div>
+
+                            <h5 id="titleDetail">Mô tả chi tiết</h5>
+                            <div class="row imgDesc m-1">
+                                <div class="col-md-3 col-sm-12">
+                                    <img class="w-100" src="img/fishs/fishDesc1.jpg" alt="">
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <img class="w-100" src="img/fishs/fishDesc2.jpg" alt="">
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <img class="w-100" src="img/fishs/fishDesc3.jpg" alt="">
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <img class="w-100" src="img/fishs/fishDesc4.webp" alt="">
+                                </div>
+                            </div>
+
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                            Xem ảnh
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <img class="w-100" src="img/fishs/fishDesc1.jpg" alt="">
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <img class="w-100" src="img/fishs/fishDesc2.jpg" alt="">
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <img class="w-100" src="img/fishs/fishDesc3.jpg" alt="">
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <img class="w-100" src="img/fishs/fishDesc4.webp" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Call to Action End -->
+        <div class="comment w-100 bg-danger">
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn" data-bs-toggle="collapse" href="#collapsecmt">
+                        Bình luận
+                    </a>
+                </div>
+                <div id="collapsecmt" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        <!-- <div ng-include="'commentPage.html'"></div> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src="" alt="">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <img src="" alt="">
+            </div>
+            <div class="col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <img src="" alt="">
+            </div>
+        </div>
+ <!-- start modal login -->
+ <div ng-include="'login.html'"></div>
+ <!-- end modal login -->
+ <!-- start modal register -->
+ <div ng-include="'register.html'"></div>
+ <!-- end modal register -->
+        <div ng-include="'footer.html'" class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+            data-wow-delay="0.1s"></div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true" style="z-index: 10000;">
+            <div class="modal-dialog modal-xl modal-fullscreen-sm-down" role="document">
+                <div class="modal-content">
+
+
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                        </button>
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe id="video" width="560" height="315" src="" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myctrl", function ($scope) {
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var $videoSrc;
+            $('.video-btn').click(function () {
+                $videoSrc = $(this).data("src");
+            });
+
+            $('#myModal').on('shown.bs.modal', function (e) {
+
+                $("#video").attr('src', $videoSrc);
+            })
+
+            $('#myModal').on('hide.bs.modal', function (e) {
+                $("#video").attr('src', null);
+            })
+        });
+    </script>
+
+</body>
+
+</html>
